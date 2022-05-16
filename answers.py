@@ -19,20 +19,21 @@ def max_number(mylist): #[2, 3, 6]
     return i
 # answer 4
 def place_max_number(mylist):
-    place_max_number = place_max_number[0]
+    max = mylist[0]
     for i in mylist:
-        if maxnumber < i:
-            return index(mylist)
+        if max < i:
+            max = i
+    return mylist.index(i)
+
 # answer 5
-def modolo10(mylist):
-    modolo10 = modolo10[0]
-    for i in mylist:
-        if modolo10 % 10 == 0:
+def find_if_number_divisible_10(numbers_list):
+    for i in numbers_list:
+        if i % 10 == 0:
             return i
-        else:
-            return "-1"
+    return -1
+#print (modolo10([5,55,20]))
 #answer6
-def sixtime(mylist):
+def count_6_in_the_list(mylist):
     counter = 0
     for i in mylist:
         if i == 6:
@@ -40,4 +41,17 @@ def sixtime(mylist):
     return counter
 #print (sixtime([2,3,4,5,6,6,6,6,6]))
 #answer 7
+def count_Length_of_string_if_its_4 (list_of_strings):
+    counter = 0
+    for i in list_of_strings:
+        if len(i) == 4:
+            counter += 1
+    return counter
 
+#print (count_string4(["ffss","fff","kfrs","dd"]))
+#answer 8
+def lists(list_of_strings):
+    for i in list_of_strings:
+    if isinstance(i,list_of_strings):
+        return true
+    return false
